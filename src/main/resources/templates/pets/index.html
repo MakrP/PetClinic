@@ -7,12 +7,18 @@
 <body>
 <h1>Pets List</h1>
 <table>
+    <thead>
     <tr>
         <th>Name</th>
+        <th>Type</th>
     </tr>
+    </thead>
+    <tbody>
     <tr th:each="pet : ${pets}">
-        <td th:value="${pet.name}"></td>
+        <td th:text="${pet.name}">Some Name</td>
+        <td th:text="${pet.type.name}">Some Name</td>
     </tr>
+    </tbody>
 </table>
 </body>
 </html>
